@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+</head>
+<style>
+    html,
+body {
+	height: 100%;
+	font-family: "Nunito Sans", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+    background: #151515;
+}
+.header-section {
+	padding-top: 40px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+.header-section.header-normal {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	background: #151515;
+	padding-top: 0;
+}
+
+.header-section.header-normal .logo {
+	padding: 40px 0;
+}
+
+.header-section.header-normal .nav-menu .mainmenu ul li a {
+	padding: 40px 0;
+}
+
+.header-section.header-normal .nav-menu .mainmenu ul li a:after {
+	bottom: 35px;
+}
+
+.header-section.header-normal .nav-menu .mainmenu ul li:hover .dropdown {
+	top: 107px;
+}
+
+.header-section.header-normal .nav-menu .mainmenu ul li .dropdown {
+	top: 128px;
+}
+
+.header-section.header-normal .nav-menu .mainmenu ul li .dropdown li a {
+	padding: 14px 22px;
+}
+
+.header-section.header-normal .top-social {
+	padding: 39px 0;
+}
+
+.logo {
+	float: left;
+}
+
+.logo a {
+	display: inline-block;
+}
+
+.nav-menu {
+	text-align: center;
+}
+
+.nav-menu .mainmenu {
+	display: inline-block;
+}
+
+.nav-menu .mainmenu ul li {
+	display: inline-block;
+	list-style: none;
+	margin-right: 45px;
+	position: relative;
+}
+
+.nav-menu .mainmenu ul li:last-child {
+	margin-right: 0;
+}
+
+.nav-menu .mainmenu ul li.active a {
+	color: #e4381C;
+}
+
+.nav-menu .mainmenu ul li.active a:after {
+	opacity: 1;
+}
+
+.nav-menu .mainmenu ul li a {
+	color: #ffffff;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 500;
+	line-height: 28px;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	display: block;
+	font-family: "Oswald", sans-serif;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.nav-menu .mainmenu ul li a:after {
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	width: 100%;
+	height: 2px;
+	background: #e4381C;
+	content: "";
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.nav-menu .mainmenu ul li:hover .dropdown {
+	opacity: 1;
+	visibility: visible;
+	top: 40px;
+}
+
+.nav-menu .mainmenu ul li:hover>a {
+	color: #e4381C;
+}
+
+.nav-menu .mainmenu ul li:hover>a:after {
+	opacity: 1;
+}
+
+.nav-menu .mainmenu ul li .dropdown {
+	position: absolute;
+	left: 0;
+	top: 70px;
+	width: 180px;
+	background: #e4381C;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	z-index: 99;
+}
+
+.nav-menu .mainmenu ul li .dropdown li {
+	display: block;
+	margin-right: 0;
+}
+
+.nav-menu .mainmenu ul li .dropdown li a {
+	text-align: left;
+	text-transform: capitalize;
+	padding: 10px 20px;
+	color: #ffffff;
+}
+
+.nav-menu .mainmenu ul li .dropdown li a:hover {
+	color: #151515;
+}
+
+.nav-menu .mainmenu ul li .dropdown li a:hover:after {
+	display: none;
+}
+
+.top-social {
+	float: right;
+}
+
+.top-social a {
+	display: inline-block;
+	font-size: 20px;
+	color: #ffffff;
+	margin-left: 20px;
+}
+
+.slicknav_menu {
+	display: none;
+}
+.container1{
+            max-width: 1100px;
+            font-family: sans-serif;
+            margin: auto;
+            margin-top: 50px;
+            border-radius: 20px;
+            padding: 20px;
+            background-color: #a40606;
+            background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
+            color: seashell;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        table{
+            width: 100%;
+            border-spacing: 0px;
+        }
+        th{
+            text-align: left;
+        }
+        table td:focus{
+            background-color:  #c6def6;
+        }
+        td:nth-child(3){
+            width: 400px;
+        }
+        td:last-child{
+            text-align: right;
+        }
+        table th,
+        table td{
+            padding: 15px 0px;
+            border-bottom: 1px solid #cacaca;
+            outline: none;
+        }
+
+        
+        .container2{
+          max-width: 520px;
+          margin: auto;
+          margin-top: 50px;
+          padding: 20px;
+          font-family: sans-serif;
+          background-color: #a40606;
+          background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
+          color: seashell;
+      }
+      h1{
+          margin-bottom: 30px;
+      }
+      input,
+      textarea{
+          width: calc(100% - 20px);
+          display: block;
+          padding: 6px;
+          font-size: 20px;
+          margin-top: 5px;
+          margin-bottom: 15px;
+          outline: none;
+      }
+      textarea{
+          height: 100px;
+      }
+
+      button{
+        display: inline-block;
+        padding: 15px 24px;
+        border-radius: 3px;
+        text-transform: uppercase;
+        font-size: 11px;
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        letter-spacing: 0.5px;
+      }
+      .container2, button {
+        justify-content: center;
+        text-align: center;
+      }
+      .footer-section {
+	background: #151515;
+	padding-top: 72px;
+}
+
+.footer-logo-item {
+	margin-bottom: 30px;
+}
+
+.footer-logo-item .f-logo {
+	margin-bottom: 40px;
+}
+
+.footer-logo-item .f-logo a {
+	display: inline-block;
+}
+
+.footer-logo-item p {
+	color: #afb4bf;
+	margin-bottom: 32px;
+}
+
+.footer-logo-item .social-links h6 {
+	color: #ffffff;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.footer-logo-item .social-links a {
+	color: #ffffff;
+	display: inline-block;
+	font-size: 14px;
+	margin-right: 32px;
+}
+
+.footer-logo-item .social-links a:last-child {
+	margin-right: 0;
+}
+
+.footer-widget {
+	margin-bottom: 30px;
+}
+
+.footer-widget h5 {
+	font-size: 20px;
+	font-weight: 500;
+	color: #ffffff;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+}
+
+.footer-widget .footer-blog .fb-item {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.footer-widget .footer-blog .fb-item:hover h6 {
+	color: #e4381C;
+}
+
+.footer-widget .footer-blog .fb-item h6 {
+	color: #ffffff;
+	text-transform: uppercase;
+	margin-bottom: 12px;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.footer-widget .footer-blog .fb-item span {
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 500;
+	display: block;
+	color: #afb4bf;
+}
+
+.footer-widget .footer-blog .fb-item span i {
+	color: #e4381C;
+	margin-right: 5px;
+}
+
+.footer-widget .workout-program li {
+	list-style: none;
+}
+
+.footer-widget .workout-program li a {
+	display: block;
+	font-size: 16px;
+	font-family: "Oswald", sans-serif;
+	font-weight: 500;
+	color: #ffffff;
+	line-height: 18px;
+	margin-bottom: 22px;
+}
+
+.footer-widget .footer-info li {
+	list-style: none;
+	font-size: 16px;
+	color: #afb4bf;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 20px;
+}
+
+.footer-widget .footer-info li i {
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-size: 24px;
+	color: #e4381C;
+}
+
+.footer-widget .footer-info li span {
+	color: #ffffff;
+	display: block;
+	font-family: "Oswald", sans-serif;
+	font-weight: 500;
+}
+
+.copyright-text {
+	background: #000000;
+	border-top: 1px solid #0a0a0a;
+	padding: 20px 0;
+	margin-top: 20px;
+}
+
+.copyright-text .ct-inside {
+	font-size: 14px;
+	color: #afb4bf;
+}
+
+.copyright-text .ct-inside a {
+	font-weight: 600;
+	color: #e4381C;
+}
+
+/* ----------------------------------- Other Pages Styles ------------------------------*/
+
+/*---------------------
+  Breadcrumb Section
+-----------------------*/
+
+.breadcrumb-section {
+	padding-bottom: 105px;
+}
+
+.breadcrumb-text {
+	text-align: center;
+}
+
+.breadcrumb-text h2 {
+	font-size: 48px;
+	font-weight: 500;
+	color: #ffffff;
+	text-transform: uppercase;
+	margin-bottom: 14px;
+}
+
+.breadcrumb-text .breadcrumb-controls a {
+	font-size: 16px;
+	color: #ffffff;
+	margin-right: 15px;
+	position: relative;
+}
+
+.breadcrumb-text .breadcrumb-controls a:after {
+	position: absolute;
+	right: -13px;
+	top: -2px;
+	content: "";
+	font-family: "FontAwesome";
+	font-size: 16px;
+	color: #ffffff;
+}
+
+.breadcrumb-text .breadcrumb-controls a i {
+	margin-right: 2px;
+}
+
+.breadcrumb-text .breadcrumb-controls span {
+	font-size: 16px;
+	color: #ffffff;
+}
+
+      
+</style>
+<body>
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="top-social">
+                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+            <div class="container">
+                <div class="nav-menu">
+                    <nav class="mainmenu mobile-menu">
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about-us.html">About us</a></li>
+                            <li><a href="./schedule.html">Schedule</a></li>
+                            <li><a href="./gallery.html">Gallery</a></li>
+                            <li class="active"><a href="crud.html">Crud</a></li>
+                            <li><a href="./blog.html">Blog</a>
+                                <ul class="dropdown">
+                                    <li><a href="./about-us.html">About Us</a></li>
+                                    <li><a href="./blog-single.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+</br></br>
+    <div class="container2">
+        <h1 class="heading"> <span>Contact Us</span> Us </h1>
+        <div class="form">
+            <label>Name</label>
+            <input type="text" name="Name" id="name">
+            <label>Address</label>
+            <input type="address" name="Address" id="address">
+            <label>Email</label>
+            <input type="email" name="Email" id="email">
+            <label>Message</label>
+            <textarea></textarea>
+            <button style="background-color: green;">Submit</button>
+        </div>
+    </div>
+
+    
+<!-- add firebase CDN -->
+<script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-database-compat.js"></script>
+
+<script>
+    const firebaseConfig = {
+        databaseURL: "https://crud-807da-default-rtdb.firebaseio.com/"
+    }
+    firebase.initializeApp(firebaseConfig)
+    // here connection is created with database
+    const database = firebase.database()
+
+    // run function on click submit btn
+    const submit = document.querySelector('button')
+    submit.onclick = () => sendData()
+
+    // create a function to send data
+    function sendData(){
+        var name = document.querySelectorAll('input')[0]
+        var address = document.querySelectorAll('input')[1]
+        var email = document.querySelectorAll('input')[2]
+        var message = document.querySelector('textarea')
+
+        alert("Data Inserted");
+
+ 
+        // set path where data will store
+        var listRef = database.ref('messages/')
+        // but we need firebase generated unique id's to show list data so
+        // push() will generate unique id
+        var newRef = listRef.push()
+        // now set data in db on given path
+        newRef.set({
+            // now send our data
+            'name': name.value,
+            'address': address.value,
+            'email': email.value,
+            'message': message.value
+        })
+    }
+
+
+</script>
+</body>
+
+<body>
+    <div class="container1">
+        <h1 class="heading"> <span>Client</span> Crud Review </h1>
+        <table>
+            <thead>
+                <tr>
+                    <h2><th>Name</th></h2>
+                    <h2><th>Address</th></h2>
+                    <h2><th>Email</th></h2>
+                    <h2><th>Message</th></h2>
+                    <h2><th style="justify-content: center; text-align: center;">Actions</th></h2>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</br></br>
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer-logo-item">
+                        <div class="f-logo">
+                            <a href="#"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <p>Despite growth of the Internet over the past seven years, the use of toll-free phone numbers
+                            in television advertising continues.</p>
+                        <div class="social-links">
+                            <h6>Follow us</h6>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1">
+                    <div class="footer-widget">
+                        <h5>Our Blog</h5>
+                        <div class="footer-blog">
+                            <a href="#" class="fb-item">
+                                <h6>Most people who work</h6>
+                                <span class="blog-time"><i class="fa fa-clock-o"></i> Jan 02, 2019</span>
+                            </a>
+                            <a href="#" class="fb-item">
+                                <h6>Freelance Design Tricks How </h6>
+                                <span class="blog-time"><i class="fa fa-clock-o"></i> Jan 02, 2019</span>
+                            </a>
+                            <a href="#" class="fb-item">
+                                <h6>have a computer at home have had </h6>
+                                <span class="blog-time"><i class="fa fa-clock-o"></i> Jan 02, 2019</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="footer-widget">
+                        <h5>Program</h5>
+                        <ul class="workout-program">
+                            <li><a href="#">Bodybuilding</a></li>
+                            <li><a href="#">Running</a></li>
+                            <li><a href="#">Streching</a></li>
+                            <li><a href="#">Weight Loss</a></li>
+                            <li><a href="#">Gym Fitness</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-widget">
+                        <h5>Get Info</h5>
+                        <ul class="footer-info">
+                            <li>
+                                <i class="fa fa-phone"></i>
+                                <span>Phone:</span>
+                                (12) 345 6789
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope-o"></i>
+                                <span>Email:</span>
+                                josecarlosromero788@gmail.com
+                            </li>
+                            <li>
+                                <i class="fa fa-map-marker"></i>
+                                <span>Address</span>
+                                Iris Watson, Box 283 8562, NY
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="ct-inside"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with by <a target="_blank">Jose Carlos Romero</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<!-- add firebase CDN -->
+
+<script>
+
+const dataContainer = document.querySelector('tbody')
+
+// give complete path to fetch data as given during sending
+var fetchedData = database.ref('messages/')
+fetchedData.on('value', (snapshot) => {
+    var data = snapshot.val()
+    // now set data in table
+    var htmlData = ''
+    for(var key in data){
+        var value = data[key]
+        htmlData += `
+            <tr>
+                <td>${value.name}</td>
+                <td>${value.address}</td>
+                <td>${value.email}</td>
+                <td>${value.message}</td>
+                <td>
+                    <button style="background-color: orange" onclick="readyForUpdate('${key}', this)">Update</button>
+                    <button style="background-color: red" onclick="removeMess('${key}')">Delete</button>
+                </td>
+            </tr>
+        `;
+    }
+    // we use unique id's as reference to delete and update data
+    dataContainer.innerHTML = htmlData
+})
+
+// remove message function
+function removeMess(uniqueId){
+    database.ref('messages/' + uniqueId).remove()
+    // this realtime remove will delete data without any loading
+    // as data is updated, it refetch and rerender in html automatically
+    alert("Data Removed");
+}
+
+// update function 
+function readyForUpdate(uniqueId, elem){
+    // lets ready for update
+    // it will get all the td of the tr in which btn in clicked
+    var siblingTd = elem.parentElement.parentElement.getElementsByTagName('td')
+    // convert first three td to editable
+    for(var i = 0; i < siblingTd.length-1; i++){
+        siblingTd[i].contentEditable = true
+        siblingTd[i].classList.add('temp-update-class')
+    }
+    // also change onclick function
+    elem.setAttribute('onclick', `updateNow('${uniqueId}')`)
+    elem.innerHTML = 'Send'
+}
+
+// create updateNow function
+function updateNow(uniqueId){
+    var contentId = document.querySelectorAll('.temp-update-class')
+    // now create obj using same keys as used during sending
+    var obj = {
+        'name': contentId[0].textContent,
+        'address': contentId[1].textContent,
+        'email': contentId[2].textContent,
+        'message': contentId[3].textContent
+    }
+    // create reference to the data first where data will update
+    // uniqueId will be the id of each message in db
+    var listRef = database.ref('messages/' + uniqueId)
+    // now provide updated data
+    listRef.update(obj)
+    // after update new data will rerender automatically
+    // same as during delete
+    alert("Data Updated");
+}
+
+
+</script>
+</body>
+</html>
